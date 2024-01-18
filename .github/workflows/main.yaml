@@ -1,8 +1,10 @@
 name: Node.js CI
 
 on:
+    push:
+        branches: [main]
     pull_request:
-        branches: [dev]
+        branches: [main]
 
 jobs:
     build:
@@ -25,3 +27,5 @@ jobs:
 
             - name: Build test
               run: npm run build
+
+        # fill in the next steps (배포 등)
